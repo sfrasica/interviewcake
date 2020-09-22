@@ -24,5 +24,5 @@ function memoize(fn) {
     }
 }
 
-
+const fib = memoize(fib)
 */
