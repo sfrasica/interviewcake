@@ -1,8 +1,28 @@
 function fib(n) {
-    const array = [0, 1];
+    const fibArray = [0, 1]
 
-    for (let i = 2; i <= n; i++) {
-        array.push(array[i - 1] + array[i - 2])
+    if (n < 2) {
+        return n;
     }
-    return array[n];
+    for (let i = 2; i <= n; i++) {
+        fibArray.push(fibArray[i - 1] + fibArray[i - 2]);
+    }
+    return fibArray;
 }
+
+/*memoized
+function memoize(fn) {
+    const cache = {};
+    return function(...args) {
+        if (cache[args]){
+            return cache[args];
+        }
+        const result = fn.apply(this, args);
+        cache[args] = result;
+
+        return result;
+    }
+}
+
+
+*/
