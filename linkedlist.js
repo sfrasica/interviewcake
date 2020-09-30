@@ -35,4 +35,16 @@ class LinkedList {
             node = node.next;
         }
     }
+    
+    insertLast(data) {
+        const last = this.getLast();
+    
+        if (last) {
+          // There are some existing nodes in our chain
+          last.next = new Node(data);
+        } else {
+          // The chain is empty!
+          this.head = new Node(data);
+        }
+      }
 }
