@@ -35,7 +35,7 @@ class LinkedList {
             node = node.next;
         }
     }
-    
+
     insertLast(data) {
         const last = this.getLast();
     
@@ -46,5 +46,22 @@ class LinkedList {
           // The chain is empty!
           this.head = new Node(data);
         }
+      }
+
+      removeAt(index) {
+        if (!this.head) {
+          return;
+        }
+    
+        if (index === 0) {
+          this.head = this.head.next;
+          return;
+        }
+    
+        const previous = this.getAt(index - 1);
+        if (!previous || !previous.next) {
+          return;
+        }
+        previous.next = previous.next.next;
       }
 }
