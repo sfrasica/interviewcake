@@ -10,4 +10,12 @@ class Events {
         this.events[eventName] = [callback];
       }
     }
+
+    trigger(eventName) {
+        if (this.events[eventName]) {
+          for (let callback of this.events[eventName]) {
+            callback();
+          }
+        }
+      }
 }
