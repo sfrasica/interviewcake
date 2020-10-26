@@ -18,4 +18,8 @@ class Events {
           }
         }
       }
+
+      off(eventName) {
+        delete this.events[eventName];
+      }
 }
