@@ -8,3 +8,7 @@ function twoNumberSum(array, targetSum) {
     	} else {
         mapper[num] = true;
     }
+}
+return []
+}
+
