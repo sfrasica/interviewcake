@@ -3,6 +3,6 @@ function twoNumberSum(array, targetSum) {
 
     for (const num of array) {
         const difference = targetSum - num;
-        
+        if (difference in mapper) {
+			return [difference, num]
     }
-    
