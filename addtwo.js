@@ -5,4 +5,6 @@ function twoNumberSum(array, targetSum) {
         const difference = targetSum - num;
         if (difference in mapper) {
 			return [difference, num]
+    	} else {
+        mapper[num] = true;
     }
