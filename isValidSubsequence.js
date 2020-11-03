@@ -1,0 +1,3 @@
+function isValidSubsequence(array, sequence) {
+    
+}
