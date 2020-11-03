@@ -5,6 +5,7 @@ function isValidSubsequence(array, sequence) {
     while (arrayIndex < array.length && sequenceIndex < sequence.length) {
         if (array[arrayIndex] === sequence[sequenceIndex]) {
             sequenceIndex++;
-        }
+        } arrayIndex++;
     }
+    return sequenceIndex === sequence.length;
 }
