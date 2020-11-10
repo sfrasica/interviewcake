@@ -9,3 +9,9 @@ for dog in dog_breeds_available_for_adoption:
   if dog == dog_breed_I_want:
     print("They have the dog I want!")
     break
+
+#List Comprehension
+
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+
+can_ride_coaster = [height for height in heights if height > 161]
