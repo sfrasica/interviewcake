@@ -3,3 +3,9 @@ function productSum(array, multiplier = 1) {
   for (let element of array) {
 		if (Array.isArray(element)) {
 			sum += productSum(element, multiplier + 1) * multiplier;
+		} else {
+			sum += element * multiplier;
+		}
+	}
+	return sum;
+}
