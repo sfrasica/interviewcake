@@ -3,11 +3,10 @@ function isPalindrome(string) {
       let strArr = string.split('');
       let revArr = []
       
-      strArr.map(char => {
+      strArr.forEach(char => {
           revArr.unshift(char)
       })
       let revStr = revArr.join('')
       return revStr === string
   }
 
-  
