@@ -7,6 +7,13 @@ function caesarCipherEncryptor(string, key) {
            let lettersIndex = letters.indexOf(strArr[i])
            if (lettersIndex + key > 25) {
                lettersIndex = (lettersIndex + key) % 26;
+           } else {
+               lettersIndex = lettersIndex + key;
            }
-        }
-    }
+               shiftedArr.push(letters[lettersIndex])
+          }
+      
+      return shiftedArr.join('');
+  // 
+  
+  }
